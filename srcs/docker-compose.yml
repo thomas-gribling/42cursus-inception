@@ -1,0 +1,16 @@
+networks:
+  inception:
+    name: inception
+
+services:
+  nginx:
+    container_name: nginx
+    build: requirements/nginx
+    ports:
+      - "443:443"
+    #depends_on:
+    #  - wordpress
+    #volumes:
+    networks:
+      - inception
+    restart: always
