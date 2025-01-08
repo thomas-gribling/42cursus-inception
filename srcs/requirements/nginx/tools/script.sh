@@ -1,1 +1,1 @@
-sslprotocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1 -TLSv1.2 +TLSv1.3
+#!/bin/bash

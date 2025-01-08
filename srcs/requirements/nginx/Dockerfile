@@ -1,5 +1,6 @@
 FROM debian:oldstable
 
-RUN apt update && apt install nginx && apt install openssl
+RUN apt -y update && apt -y install nginx && apt -y install openssl
 
-CMD ["./tools/script.sh"]
+COPY ./tools/script.sh /
+CMD [ "/script.sh" ]
