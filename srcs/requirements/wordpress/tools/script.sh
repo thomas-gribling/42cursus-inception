@@ -28,10 +28,10 @@ wp user create $WP_USER $WP_MAIL --role=author --user_pass=$WP_PASS --allow-root
 
 #wp theme install redis-cache --activate --allow-root
 
-sed -i 's/listen = \/run\/php\/php7.3-fpm.sock/listen = 9000/g' /etc/php/7.3/fpm/pool.d/www.conf
+sed -i 's/listen = \/run\/php\/php7.4-fpm.sock/listen = 9000/g' /etc/php/7.4/fpm/pool.d/www.conf
 
 mkdir /run/php
 
 #wp redis enable --allow-root
 
-/user/sbin/php-fpm7.3 -F
+/user/sbin/php-fpm7.4 -F
