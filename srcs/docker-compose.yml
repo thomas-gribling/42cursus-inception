@@ -13,3 +13,45 @@ volumes:
       device: /home/tgriblin/data/wordpress
       o: bind
       type: none
+
+networks:
+  inception:
+    name: inception
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx/.
+    ports:
+      - "443:443"
+    depends_on:
+      - wordpress
+    volumes:
+      - wordpress:/var/www/html
+    env_file:
+      - var.env
+    networks:
+      - inception
+    restart: always
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress/.
+    depends_on:
+      - mariadb
+    volumes:
+      - wordpress:/var/www/html
+    env_file:
+      - var.env
+    networks:
+      - inception
+    restart: always
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb/.
+    volumes:
+      - mariadb:/var/lib/mysql
+    env_file:
+      - var.env
+    networks:
+      - inception
+    restart: always
