@@ -1,4 +1,4 @@
- >#!/bin/bash
+#!/bin/bash
 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $TLS_KEY -out $TLS_CERT -subj "/C=FR/L=PO/O=42/OU=student/CN=$WP_URL"
 
