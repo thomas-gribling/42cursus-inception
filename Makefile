@@ -3,6 +3,8 @@ COMPOSE = srcs/docker-compose.yml
 all: up
 
 up:
+	@mkdir -p /home/tgriblin/data/mariadb
+	@mkdir -p /home/tgriblin/data/wordpress
 	@docker-compose -f $(COMPOSE) up -d
 
 down:

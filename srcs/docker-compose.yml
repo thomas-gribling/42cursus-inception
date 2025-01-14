@@ -42,7 +42,7 @@ volumes:
   mariadb:
     name: mariadb
     driver: local
-    diver_opts:
+    driver_opts:
       type: none
       device: /home/tgriblin/data/mariadb
       o: bind
