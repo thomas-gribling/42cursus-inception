@@ -1,6 +1,6 @@
 #!/bin/bash
 
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $TLS_KEY -out $TLS_CERT -subj "/C=FR/L=PO/O=42/OU=student/CN=$WP_URL"
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $TLS_KEY -out $TLS_CERT -subj "/C=FR/L=PO/O=42perpignan/OU=student/CN=$WP_URL"
 
 echo "
 server {
@@ -11,6 +11,7 @@ server {
 
 	ssl_certificate $TLS_CERT;
 	ssl_certificate_key $TLS_KEY;
+
 	ssl_protocols TLSv1.3;
 
 	index index.php;
