@@ -8,6 +8,4 @@ echo "FLUSH PRIVILEGES;" >> db1.sql
 
 mysqld_safe < db1.sql
 
-mysqld_safe
-
 service mariadb start
