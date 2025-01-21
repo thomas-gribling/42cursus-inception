@@ -20,7 +20,7 @@ mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 sed -i -r "s/database_name_here/$DB_NAME/1" wp-config.php # // line 23
 sed -i -r "s/username_here/$DB_USER/1" wp-config.php # // line 26
 sed -i -r "s/password_here/$DB_PASS/1" wp-config.php # // line 29
-#sed -i -r "s/localhost/mariadb/1" wp-config.php # // line 32
+sed -i -r "s/localhost/mariadb/1" wp-config.php # // line 32
 
 wp core install --url=$WP_URL/ --title=$WP_TITLE --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASS --admin_enail=$WP_ADMIN_MAIL --skip-email --allow-root
 wp user create $WP_USER $WP_MAIL --role=author --user_pass=$WP_PASS --allow-root

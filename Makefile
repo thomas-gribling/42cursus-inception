@@ -21,6 +21,3 @@ stop:
 
 restart:
 	@docker-compose -f $(COMPOSE) restart
-
-status:
-	@docker ps
