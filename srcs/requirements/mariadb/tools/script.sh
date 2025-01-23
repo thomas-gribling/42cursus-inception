@@ -7,3 +7,5 @@ echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS' ;" >> db1.sql
 echo "FLUSH PRIVILEGES;" >> db1.sql
 
 mysqld --skip-grant-tables < db1.sql
+
+#kill $(cat /run/mysqld/mysqld.pid)
