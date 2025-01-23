@@ -19,7 +19,7 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-/** The name of the tgriblin_inception for WordPress */
+/** The name of the database for WordPress */
 define( 'DB_NAME', 'database_name_here' );
 
 /** Database username */
@@ -29,12 +29,12 @@ define( 'DB_USER', 'username_here' );
 define( 'DB_PASSWORD', 'password_here' );
 
 /** Database hostname */
-define( 'DB_HOST', 'mariadb' );
+define( 'DB_HOST', 'localhost' );
 
-/** Database charset to use in creating tgriblin_inception tables. */
+/** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
 
-/** The tgriblin_inception collate type. Don't change this if in doubt. */
+/** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
 /**#@+
@@ -60,12 +60,12 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 /**#@-*/
 
 /**
- * WordPress tgriblin_inception table prefix.
+ * WordPress database table prefix.
  *
- * You can have multiple installations in one tgriblin_inception if you give each
+ * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  *
- * At the installation time, tgriblin_inception tables are created with the specified prefix.
+ * At the installation time, database tables are created with the specified prefix.
  * Changing this value after WordPress is installed will make your site think
  * it has not been installed.
  *

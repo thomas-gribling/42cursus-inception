@@ -6,6 +6,4 @@ echo "GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'%' ;" >> db1.sql
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS' ;" >> db1.sql
 echo "FLUSH PRIVILEGES;" >> db1.sql
 
-mysqld --skip-grant-tables < db1.sql
-
-#kill $(cat /run/mysqld/mysqld.pid)
+mysqld
