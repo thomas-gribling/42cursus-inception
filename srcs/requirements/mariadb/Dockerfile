@@ -1,6 +1,6 @@
 FROM debian:oldstable
 
-RUN apt update -y && apt upgrade -y
+RUN apt update -y
 RUN apt install mariadb-client mariadb-server -y
 RUN mkdir -p /run/mysqld && chmod 777 /run/mysqld
 
