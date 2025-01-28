@@ -4,8 +4,8 @@ server {
 
 	server_name www.WP_URL WP_URL;
 
-	ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
-	ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+	ssl_certificate TLS_CERT;
+	ssl_certificate_key TLS_KEY;
 
 	ssl_protocols TLSv1.3;
 
