@@ -7,4 +7,4 @@ RUN mkdir -p /run/mysqld && chmod 777 /run/mysqld
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 COPY ./tools/script.sh /
 
-CMD ["/script.sh"]
+ENTRYPOINT ["sh", "/script.sh"]

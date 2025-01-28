@@ -3,7 +3,7 @@ version: "3.5"
 services:
   mariadb:
     container_name: mariadb
-    image: mariadb:42
+    image: mariadb
     build: ./requirements/mariadb/.
     volumes:
       - mariadb:/var/lib/mysql
@@ -14,7 +14,7 @@ services:
     restart: always
   wordpress:
     container_name: wordpress
-    image: wordpress:42
+    image: wordpress
     build: ./requirements/wordpress/.
     depends_on:
       - mariadb
@@ -27,7 +27,7 @@ services:
     restart: always
   nginx:
     container_name: nginx
-    image: nginx:42
+    image: nginx
     build: ./requirements/nginx/.
     ports:
       - "443:443"
